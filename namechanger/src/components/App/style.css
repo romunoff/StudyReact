@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.div-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 50px;
+    background: white;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 2s;
+}
+
+

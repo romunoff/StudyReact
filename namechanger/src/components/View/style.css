@@ -1,0 +1,22 @@
+.view-list-li-style {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.float-left { float: left;}
+
+.margin-right { margin-right: 10px; }
+
+.div-style {
+    width: 50px;
+    text-align: right;
+}
+
+.div-font-size {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.btn-remove {
+    color: red;
+}
