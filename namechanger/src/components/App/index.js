@@ -1,79 +1,39 @@
-import React, {Component} from 'react'
+import React, {useState} from 'react'
 import View from '../View'
 import Change from '../Change'
 import './style.css'
 
-class App extends Component {
-    constructor(props) {
-        super(props);
+export default function App() {
+    const [isVisible, setVisible] = useState(true)
+    const [background, setBackground] = useState('white')
 
-        this.state = {
-            isVisible: true,
-            background: 'white'
-        }
-
-        this.handleClick = this.handleClick.bind(this)
-        this.deleteClick = this.deleteClick.bind(this)
-    }
-
-    handleClick = () => {
-        if (this.state.isVisible) {
-            this.setState({
-                isVisible: !this.state.isVisible
-            })
+    const handleClick = () => {
+        if (isVisible) {
+            setVisible(!isVisible)
         } else {
-            this.setState({
-                background: '#47e2a1'
-            })
+            setBackground('#47e2a1')
             setTimeout(() => {
-                this.setState({
-                    background: 'white'
-                })
+                setBackground('white')
             }, 2000)
             setTimeout(() => {
-                this.setState({
-                    isVisible: !this.state.isVisible,
-
-                })
+                setVisible(!isVisible)
             }, 4000)
         }
     }
 
-    deleteClick = () => {
+    const deleteClick = () => {
         alert("User is deleted")
     }
 
-    render() {
-        const isVisible = this.state.isVisible
-        let element = null
-        if (isVisible) {
-            element = <View onClick = {this.handleClick} onDeleteClick = {this.deleteClick} />
-            /*setTimeout(() => {
-                this.setState({
-                    background: 'white'
-                })
-            }, 0)*/
-        } else {
-            element = <Change onClick = {this.handleClick} />
-            /*setTimeout(() => {
-                this.setState({
-                    background: 'green'
-                })
-            }, 2000)*/
-        }
-
-        return (
-            <div className="wrapper">
-                <div className="column">
-                    <div className="div-message" style={{background: this.state.background}}>User is saved!</div>
-                    <div className="card">
-                        <h1 className="title">Name</h1>
-                        {element}
-                    </div>
+    return (
+        <div className="wrapper">
+            <div className="column">
+                <div className="div-message" style={{background: background}}>User is saved!</div>
+                <div className="card">
+                    <h1 className="title">Name</h1>
+                    { isVisible ? <View onClick = {handleClick} onDeleteClick = {deleteClick} /> : <Change onClick = {handleClick} /> }
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
-
-export default App
