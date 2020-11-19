@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import View from '../View'
 import Change from '../Change'
 import './style.css'
@@ -6,6 +6,15 @@ import './style.css'
 export default function App() {
     const [isVisible, setVisible] = useState(true)
     const [background, setBackground] = useState('white')
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        fetch(" http://localhost:3000/users.json")
+            .then(response => response.json())
+            .then(users => {
+                setUsers(users.users)
+            })
+    }, [])
 
     const handleClick = () => {
         if (isVisible) {
@@ -21,8 +30,8 @@ export default function App() {
         }
     }
 
-    const deleteClick = () => {
-        alert("User is deleted")
+    const deleteClick = username => {
+        setUsers(users.filter(element => element.username !== username))
     }
 
     return (
@@ -31,7 +40,7 @@ export default function App() {
                 <div className="div-message" style={{background: background}}>User is saved!</div>
                 <div className="card">
                     <h1 className="title">Name</h1>
-                    { isVisible ? <View onClick = {handleClick} onDeleteClick = {deleteClick} /> : <Change onClick = {handleClick} /> }
+                    { isVisible ? <View onClick = {handleClick} onDeleteClick = {deleteClick} users={users} /> : <Change onClick = {handleClick} /> }
                 </div>
             </div>
         </div>
