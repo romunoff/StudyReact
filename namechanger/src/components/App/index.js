@@ -40,7 +40,7 @@ export default function App() {
                 <div className="div-message" style={{background: background}}>User is saved!</div>
                 <div className="card">
                     <h1 className="title">Name</h1>
-                    { isVisible ? <View onClick = {handleClick} onDeleteClick = {deleteClick} users={users} /> : <Change onClick = {handleClick} /> }
+                    { isVisible ? <View onClick = {handleClick} onDeleteClick = {deleteClick} users = {users} /> : <Change onClick = {handleClick} /> }
                 </div>
             </div>
         </div>
