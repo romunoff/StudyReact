@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react"
+import Ticket from "./Ticket"
+import Filters from "./Filters"
+import { Col, Row } from "antd"
+import * as data from "./Filters/filters.json"
+import { TypeFilters } from "./interfaces"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App: React.FC = () => {
+    const [filters, setFilters] = useState<TypeFilters[]>([])
+
+    useEffect(() => {
+        setFilters(data.filters)
+    }, [])
+
+    const onCheckedHandler = (title: string) => {
+        setFilters(prev => prev.map(filter => {
+            if (filter.title === title) {
+                filter.isChecked = !filter.isChecked
+            }
+            return filter
+        }))
+    }
+
+    return (
+        <Row justify="center" align="middle">
+            <Col>
+                <Filters filterList={filters} checked={onCheckedHandler} />
+            </Col>
+            <Col>
+                <Ticket />
+            </Col>
+        </Row>
+    )
 }
 
-export default App;
+export default App
