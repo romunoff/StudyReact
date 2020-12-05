@@ -10,7 +10,7 @@ const Ticket: React.FC<TicketProps> = ({ ticket}) => {
     return (
         <Card className="ticket">
             <p>{ticket.transfers} TRANSFER</p>
-            <Divider className="divider" orientation="right" plain>Air</Divider>
+            <Divider orientation="right" style={{ borderColor: "black" }} plain>"Airplane icon"</Divider>
         </Card>
     )
 }

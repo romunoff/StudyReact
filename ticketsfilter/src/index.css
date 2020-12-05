@@ -3,14 +3,11 @@
     border-color: black;
     text-align: center;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .filters {
     margin-right: 10px;
-    border-color: black;
-}
-
-.divider {
     border-color: black;
 }
 
