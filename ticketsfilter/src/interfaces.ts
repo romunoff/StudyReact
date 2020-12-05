@@ -1,4 +1,4 @@
-export interface TypeFilters {
-    title: string,
-    isChecked: boolean
+export interface ITicket {
+    id: string,
+    transfers: number
 }

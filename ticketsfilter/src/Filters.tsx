@@ -1,21 +1,21 @@
 import React from "react"
 import { Card, Checkbox } from "antd"
-import { TypeFilters } from "./interfaces"
+import * as data from "./Filters/filters.json"
 
 interface FiltersProps {
-    filterList: TypeFilters[],
-    checked(title: string): void
+    onChange(filter: string): void,
+    allState: boolean
 }
 
-const Filters: React.FC<FiltersProps> = ({filterList, checked}) => {
+const Filters: React.FC<FiltersProps> = ({ onChange, allState }) => {
     return (
         <Card className="filters">
             <p>NUMBER OF TRANSFERS</p>
             <ul>
                 {
-                    filterList.map(filter =>
+                    data.filters.map(filter =>
                         <li className="list-li-style" key={filter.title}>
-                            <Checkbox checked={filter.isChecked} onClick={() => checked(filter.title)}>{filter.title}</Checkbox>
+                            <Checkbox disabled={filter.title === "ALL" ? false : allState} onChange={() => onChange(filter.title)}>{filter.title}</Checkbox>
                         </li>
                     )
                 }

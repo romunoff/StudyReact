@@ -1,9 +1,9 @@
 {
   "filters": [
-    { "title": "ALL", "isChecked": false },
-    { "title": "NO TRANSFERS", "isChecked": true },
-    { "title": "1 TRANSFER", "isChecked": true },
-    { "title": "2 TRANSFER", "isChecked": false},
-    { "title": "3 TRANSFER", "isChecked": false }
+    { "title": "ALL" },
+    { "title": "NO TRANSFERS" },
+    { "title": "1 TRANSFER" },
+    { "title": "2 TRANSFER" },
+    { "title": "3 TRANSFER" }
   ]
 }

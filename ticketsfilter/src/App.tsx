@@ -1,33 +1,50 @@
 import React, { useState, useEffect } from "react"
-import Ticket from "./Ticket"
 import Filters from "./Filters"
 import { Col, Row } from "antd"
-import * as data from "./Filters/filters.json"
-import { TypeFilters } from "./interfaces"
+import { ITicket } from "./interfaces"
+import TicketsList from "./TicketsList";
 
 const App: React.FC = () => {
-    const [filters, setFilters] = useState<TypeFilters[]>([])
+    const [filters, setFilters] = useState<string[]>([])
+    const [filtersCopy, setFiltersCopy] = useState<string[]>([])
+    const [tickets, setTickets] = useState<ITicket[]>([])
+    const [allState, setAllState] = useState(false)
 
     useEffect(() => {
-        setFilters(data.filters)
+        fetch("http://localhost:3000/tickets.json")
+            .then(response => response.json())
+            .then(tickets => {
+                setTickets(tickets.tickets)
+            })
     }, [])
 
-    const onCheckedHandler = (title: string) => {
-        setFilters(prev => prev.map(filter => {
-            if (filter.title === title) {
-                filter.isChecked = !filter.isChecked
+    const handleChange = (filterTitle: string) => {
+        if (!filterTitle.includes("ALL")) {
+            if (filterTitle.includes("NO")) {
+                filterTitle = "0 TRANSFERS"
             }
-            return filter
-        }))
+            if (filters.includes(filterTitle)) {
+                setFilters(filters.filter(element => element !== filterTitle))
+            } else {
+                setFilters([...filters, filterTitle])
+            }
+        } else {
+            setAllState(!allState)
+            if (!allState) {
+                setFiltersCopy(filters)
+                setFilters(["0 TRANSFERS, 1 TRANSFERS, 2 TRANSFERS, 3 TRANSFERS"])
+            } else setFilters(filtersCopy)
+
+        }
     }
 
     return (
-        <Row justify="center" align="middle">
+        <Row justify="center">
             <Col>
-                <Filters filterList={filters} checked={onCheckedHandler} />
+                <Filters onChange={handleChange} allState={allState} />
             </Col>
             <Col>
-                <Ticket />
+                <TicketsList filterList={filters} ticketList={tickets} />
             </Col>
         </Row>
     )

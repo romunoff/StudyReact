@@ -1,10 +1,15 @@
 import React from "react"
 import { Card, Divider } from "antd"
+import { ITicket } from "./interfaces"
 
-const Ticket: React.FC = () => {
+interface TicketProps {
+    ticket: ITicket
+}
+
+const Ticket: React.FC<TicketProps> = ({ ticket}) => {
     return (
         <Card className="ticket">
-            <p>NO TRANSFER</p>
+            <p>{ticket.transfers} TRANSFER</p>
             <Divider className="divider" orientation="right" plain>Air</Divider>
         </Card>
     )
