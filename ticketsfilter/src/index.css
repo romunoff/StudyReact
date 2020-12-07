@@ -1,16 +1,16 @@
 .ticket {
-    width: 300px;
-    border-color: black;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 20px;
+  width: 300px;
+  border-color: black;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .filters {
-    margin-right: 10px;
-    border-color: black;
+  margin-right: 10px;
+  border-color: black;
 }
 
 .list-li-style {
-    list-style: none;
+  list-style: none;
 }

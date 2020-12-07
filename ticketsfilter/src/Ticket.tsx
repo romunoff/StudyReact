@@ -1,18 +1,20 @@
-import React from "react"
-import { Card, Divider } from "antd"
-import { ITicket } from "./interfaces"
+import React from "react";
+import { Card, Divider } from "antd";
+import { ITicket } from "./interfaces";
 
 interface TicketProps {
-    ticket: ITicket
+  ticket: ITicket;
 }
 
-const Ticket: React.FC<TicketProps> = ({ ticket}) => {
-    return (
-        <Card className="ticket">
-            <p>{ticket.transfers} TRANSFER</p>
-            <Divider orientation="right" style={{ borderColor: "black" }} plain>"Airplane icon"</Divider>
-        </Card>
-    )
-}
+const Ticket: React.FC<TicketProps> = ({ ticket }) => {
+  return (
+    <Card className="ticket">
+      <p>{ticket.transfers} TRANSFER</p>
+      <Divider orientation="right" style={{ borderColor: "black" }} plain>
+        "Airplane icon"
+      </Divider>
+    </Card>
+  );
+};
 
-export default Ticket
+export { Ticket };

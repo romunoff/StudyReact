@@ -20,10 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe690b73-b53c-47b1-ae72-4ddecb9a60fc" name="Default Changelist" comment="Adding functionality to filters">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ticketsfilter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ticketsfilter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tickets.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/tickets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Filters/filters.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filters/filters.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ticket.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ticket.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicketsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicketsList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +57,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1lA5gUvBr8NahC2Umnc4rH816h0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,13 +71,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\romunoff\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="D:\Study_ReactJS\ticketsfilter\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -86,7 +112,8 @@
       <updated>1607027166379</updated>
       <workItem from="1607027167506" duration="7616000" />
       <workItem from="1607093601542" duration="24101000" />
-      <workItem from="1607172554953" duration="11859000" />
+      <workItem from="1607172554953" duration="12347000" />
+      <workItem from="1607361427640" duration="6377000" />
     </task>
     <task id="LOCAL-00001" summary="Add filters from JSON">
       <created>1607102734095</created>
@@ -109,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607184031359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding functionality to filters">
+      <created>1607186450372</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607186450372</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,33 +167,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="Adding functionality to filters" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="828" y="447" key="#ESLint" timestamp="1607362253577">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="828" y="447" key="#ESLint/0.30.1920.1050@0.30.1920.1050" timestamp="1607362253577" />
     <state x="690" y="302" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607027583804">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="302" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1607027583804" />
-    <state width="1899" height="190" key="GridCell.Tab.0.bottom" timestamp="1607183969943">
+    <state width="1899" height="190" key="GridCell.Tab.0.bottom" timestamp="1607363573720">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1899" height="190" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1607183969943" />
-    <state width="1899" height="190" key="GridCell.Tab.0.center" timestamp="1607183969943">
+    <state width="1899" height="190" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1607363573720" />
+    <state width="1899" height="190" key="GridCell.Tab.0.center" timestamp="1607363573720">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1899" height="190" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1607183969943" />
-    <state width="1899" height="190" key="GridCell.Tab.0.left" timestamp="1607183969943">
+    <state width="1899" height="190" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1607363573720" />
+    <state width="1899" height="190" key="GridCell.Tab.0.left" timestamp="1607363573720">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1899" height="190" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1607183969943" />
-    <state width="1899" height="190" key="GridCell.Tab.0.right" timestamp="1607183969943">
+    <state width="1899" height="190" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1607363573720" />
+    <state width="1899" height="190" key="GridCell.Tab.0.right" timestamp="1607363573720">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1899" height="190" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1607183969943" />
-    <state x="552" y="288" key="Vcs.Push.Dialog.v2" timestamp="1607184041972">
+    <state width="1899" height="190" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1607363573720" />
+    <state x="461" y="200" key="SettingsEditor" timestamp="1607363383359">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="552" y="288" key="Vcs.Push.Dialog.v2/0.30.1920.1050@0.30.1920.1050" timestamp="1607184041972" />
-    <state x="777" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607102616248">
+    <state x="461" y="200" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1607363383359" />
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2" timestamp="1607186453785">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="777" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1607102616248" />
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2/0.30.1920.1050@0.30.1920.1050" timestamp="1607186453785" />
+    <state x="777" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607186443689">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="777" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1607186443689" />
   </component>
 </project>
